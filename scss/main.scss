@@ -1,0 +1,258 @@
+@import 'reset';
+@import 'grid';
+@import 'demo';
+
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto|Roboto+Slab);
+$heading-font: 'Roboto Slab';
+$body-font: 'Roboto';
+$heading-font-color: rgb(33, 33, 33);
+$body-font-color: rgb(66, 66, 66);
+$san-marino-blue: rgba(37, 116, 169, 1);
+$latte-white: #FFF8E7;
+$ivory-white: #FFFFF0;
+$burgundy-red: rgb(128, 0, 32);
+$cal-poly-green: #1E4D2B;
+$vermilion-orange: rgb(217, 56, 30);
+$rebecca-purple: rgb(102, 51, 153);
+$dim-gray: #696969;
+
+%float-left {
+  float: left;
+}
+
+// Borders
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+     -o-border-radius: $radius;
+        border-radius: $radius;
+}
+
+@mixin blue($alpha) {
+  background-color: rgba(37, 116, 169, $alpha);
+}
+
+@mixin orange($alpha) {
+  background-color: rgba(217, 56, 30, $alpha);
+}
+
+@mixin gray($alpha) {
+  background-color: rgba(105, 105, 105, $alpha);
+}
+
+@mixin red($alpha) {
+  background-color: rgba(128, 0, 32, $alpha);
+}
+
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+body {
+  background-color: $latte-white;
+}
+
+h1 {
+  color: $heading-font-color;
+  font: 2em 'Roboto Slab';
+}
+
+h2 {
+  color: $heading-font-color;
+  font: 1.5em 'Roboto Slab';
+}
+
+h3 {
+  color: $heading-font-color;
+  font: 1.17em 'Roboto Slab';
+}
+
+h4 {
+
+  font: 1.12em 'Roboto Slab';
+}
+
+h5 {
+  color: $heading-font-color;
+  font: .83em 'Roboto Slab';
+}
+
+h6 {
+  color: $heading-font-color;
+  font: .75em 'Roboto Slab';
+}
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+  font-family: $body-font;
+  color: $ivory-white;
+}
+
+// Paragraphs and blockquote
+.p-block-justified {
+  font: 1em 'Roboto';
+  color: $body-font-color;
+  line-height: 1.25em;
+  margin: 1.25em 0;
+  text-align: justify;
+  padding: 5px 20px 5px 20px;
+}
+
+blockquote {
+  font: 1em 'Roboto';
+  font-style: italic;
+  color: $body-font-color;
+  line-height: 1.25em;
+  margin: 1.25em 0;
+  text-align: justify;
+  padding: 5px 20px 5px 20px;
+  border-left: 3px solid $burgundy-red;
+}
+
+// Buttons
+.btn-red {
+
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: $body-font;
+  color: $ivory-white;
+  font-size: 20px;
+  background: $burgundy-red;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-blue {
+
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: $body-font;
+  color: $ivory-white;
+  font-size: 20px;
+  background: $san-marino-blue;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-green {
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: $body-font;
+  color: $ivory-white;
+  font-size: 20px;
+  background: $cal-poly-green;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-orange {
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: $body-font;
+  color: $ivory-white;
+  font-size: 20px;
+  background: $vermilion-orange;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-purple {
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: $body-font;
+  color: $ivory-white;
+  font-size: 20px;
+  background: $rebecca-purple;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-gray {
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: $body-font;
+  color: $ivory-white;
+  font-size: 20px;
+  background: $dim-gray;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.box-blue {
+  border-radius: 20px;
+  border: 2px solid $dim-gray;
+  color: $latte-white;
+  font: 20px $body-font;
+  padding: 20px 20px 20px 20px;
+  line-height: 1.25em;
+  margin: 1.25em 0;
+  text-align: justify;
+  @include blue(0.8);
+}
+
+.box-orange {
+  border-radius: 10px;
+  border: 2px solid $dim-gray;
+  color: $latte-white;
+  font: 20px $body-font;
+  padding: 20px 20px 20px 20px;
+  line-height: 1.25em;
+  margin: 1.25em 0;
+  text-align: justify;
+  @include orange(0.8);
+}
+
+.box-gray {
+  border-radius: 0px;
+//  border: 1px solid $dim-gray;
+  color: $latte-white;
+  font: 20px $body-font;
+  padding: 20px 20px 20px 20px;
+  line-height: 1.25em;
+  margin: 1.25em 0;
+  text-align: justify;
+  @include gray(0.8);
+}
+
+footer {
+  padding-top: 20px;
+  @include red(1);
+  color: $latte-white;
+  .fsec-one {
+    float: left;
+    font: 16px $body-font;
+    padding-left: 50px;
+    padding-bottom: 20px;
+  }
+  .fsec-two {
+    float: right;
+    padding-right: 50px;
+    font: 16px $body-font;
+    padding-bottom: 20px;
+    a:link {
+      color: $ivory-white;
+      text-decoration: none;
+    }
+  }
+}
+
+.grid-example {
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+    @include blue(1);
+  }
+}
+
+.h1-demo {
+  text-align: center;
+}
+
+
+
